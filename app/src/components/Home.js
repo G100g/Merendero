@@ -1,6 +1,6 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
 import { Link } from 'react-router';
+import { Button } from 'react-toolbox/lib/button';
 
 const Home = () => {
 
@@ -8,14 +8,14 @@ const Home = () => {
 
     render() {
       return (<div>
-
-        <h1>Home</h1>
-
+<br />
+<br />
+<br />
         <Link to="/places">
-          <RaisedButton label="Places" fullWidth={true} />
+          <Button label="Places" />
         </Link>
-        <Link to="/people">
-          <RaisedButton label="People" fullWidth={true} />
+        <Link to="/lunch">
+          <Button label="Lunch" />
         </Link>
 
       </div>);

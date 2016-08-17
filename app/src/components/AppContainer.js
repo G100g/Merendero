@@ -6,9 +6,7 @@ import Main from './Main';
 function mapStateToProps(state) {
 
   console.log(state);
-  return {
-    places: state.places.all,
-  };
+  return state;
 }
 
 function mapDispatchToProps(dispatch) {

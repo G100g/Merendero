@@ -11,7 +11,24 @@ import { browserHistory } from 'react-router'
 
 const defaultState = {
   places: { all: []},
-  users: []
+  users: {
+
+    giorgio: {
+      name: 'Giorgio'
+    },
+    gabriele: {
+      name: 'Gabriele'
+    },
+    davide: {
+      name: 'davide'
+    },
+
+  },
+  lunches: ['giorgio']
+    // 20161011: {
+    //   users: ['giorgio', 'davide', 'gabriele']
+    // }
+
   // users: [],
 };
 

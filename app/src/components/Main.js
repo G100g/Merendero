@@ -1,18 +1,20 @@
 import React from 'react';
-import AppBar from 'material-ui/AppBar';
+import { Link } from 'react-router';
+import AppBar from 'react-toolbox/lib/app_bar';
 
 const Main = ( props ) => {
 
   // let pp = places.slice(0)
-
+console.log(props);
   return (
     <div>
-    <AppBar
-       title="Il Merendero"
-       iconClassNameRight="muidocs-icon-navigation-expand-more"
-     />
-     {/* We use cloneElement here so we can auto pass down props */}
-     { React.cloneElement(props.children, props) }
+    <AppBar fixed flat>
+        <Link to="/">Merendero</Link>
+    </AppBar>
+    {props.lunches}
+
+    {/* We use cloneElement here so we can auto pass down props */}
+    {props.children}
 
     </div>
   );

@@ -12,3 +12,10 @@ export const removePlace = (place_id) => {
     value: place_id,
   };
 };
+
+export const addUserToLunch = (user_id) => {
+  return {
+    type: 'ADD_USER_TO_LUNCH',
+    value: user_id,
+  };
+};
