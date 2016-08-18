@@ -13,9 +13,9 @@ export const removePlace = (place_id) => {
   };
 };
 
-export const addUserToLunch = (user_id) => {
+export const addUserToLunch = (users_id) => {
   return {
     type: 'ADD_USER_TO_LUNCH',
-    value: user_id,
+    value: users_id,
   };
 };

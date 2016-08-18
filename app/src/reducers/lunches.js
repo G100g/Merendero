@@ -4,12 +4,12 @@ const lunches = (state = [], action) => {
 
     case 'ADD_USER_TO_LUNCH':
 
-    let new_state = state.slice(0);
-    new_state.push(action.value)
+    // let new_state = state.slice(0);
+    // new_state.push(action.value)
+    //
+    // console.log('reducer', action, state, new_state)
 
-    console.log('reducer', action, state, new_state)
-
-    return new_state;
+    return action.value;
 
     default:
       return state;

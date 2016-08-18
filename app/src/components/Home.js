@@ -8,9 +8,6 @@ const Home = () => {
 
     render() {
       return (<div>
-<br />
-<br />
-<br />
         <Link to="/places">
           <Button label="Places" />
         </Link>

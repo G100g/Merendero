@@ -6,6 +6,7 @@ import AppContainer from './components/AppContainer';
 import Places from './components/Places';
 import People from './components/People';
 import LunchContainer from './components/LunchContainer';
+import LunchResult from './components/LunchResult';
 import Home from './components/Home';
 
 import store, { history } from './store.js';
@@ -29,6 +30,7 @@ ReactDOM.render(
             <Route path="/places" component={Places}></Route>
             <Route path="/people" component={People}></Route>
             <Route path="/lunch" component={LunchContainer}></Route>
+            <Route path="/lunch/result" component={LunchResult}></Route>
           </Route>
         </Router>
     </Provider>

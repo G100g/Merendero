@@ -8,13 +8,14 @@ const Main = ( props ) => {
 console.log(props);
   return (
     <div>
-    <AppBar fixed flat>
-        <Link to="/">Merendero</Link>
-    </AppBar>
-    {props.lunches}
+      <AppBar flat>
+          <Link to="/">Merendero</Link>
+          {/* We use cloneElement here so we can auto pass down props */}
+      </AppBar>
 
-    {/* We use cloneElement here so we can auto pass down props */}
-    {props.children}
+      <section>
+      {props.children}
+      </section>
 
     </div>
   );

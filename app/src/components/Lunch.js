@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { List, ListItem, ListSubHeader, ListDivider, ListCheckbox } from 'react-toolbox/lib/list';
 import Autocomplete from 'react-toolbox/lib/autocomplete';
+import { Button } from 'react-toolbox/lib/button';
+import { Link } from 'react-router';
 
 // const Lunch = ({ users, lunches, addUserToLunch }) => {
 const dataSourceConfig = {
@@ -11,11 +13,13 @@ const dataSourceConfig = {
 
 class Lunch extends Component {
 
-  state = { selectedUsers : [] }
+  state = { selectedUsers : this.props.lunches }
 
   onSelectUser(chosenRequest) {
     console.log(chosenRequest);
     this.props.addUserToLunch(chosenRequest);
+
+    this.state.selectedUsers = chosenRequest;
   }
 
   parseUsers(users) {
@@ -44,8 +48,6 @@ class Lunch extends Component {
 
             <h1>Create new lunch</h1>
 
-
-
              <Autocomplete
                 direction="down"
                 selectedPosition="above"
@@ -53,57 +55,16 @@ class Lunch extends Component {
                 onChange={this.onSelectUser.bind(this)}
                 source={this.parseUsers(users)}
                 value={selectedUsers}
-
              />
+             {this.state.selectedUsers.length}
 
-             <List>
-              {lunches.map((user, i) => <ListItem key={i} caption={user} />)}
-             </List>
+             <Link to="/lunch/result">
+              <Button label="Find Places" disabled={!this.state.selectedUsers.length}/>
+             </Link>
 
           </div>);
   }
 
 }
-
-//   // places = ['mario', 'pippo'];
-//   return {
-//
-//     onSelectUser(chosenRequest) {
-//       addUserToLunch(chosenRequest.id);
-//     },
-//
-//     parseUsers(users) {
-//       return Object.keys(users).reduce((data, key) => {
-//
-//             let user = users[key];
-//             data.push({ id: key, name: user.name})
-//
-//             return data;
-//
-//         }, []);
-//   },
-//
-//     render() {
-//       return (<div>
-//
-//         <h1>Create new lunch</h1>
-//
-//          <AutoComplete
-//            floatingLabelText="Choose your colleagues"
-//            filter={AutoComplete.caseInsensitiveFilter}
-//            dataSource={this.parseUsers(users)}
-//            dataSourceConfig={dataSourceConfig}
-//            onNewRequest={this.onSelectUser}
-//          />
-//
-//          <List>
-//           {lunches.map((user, i) => <ListItem key={i} primaryText={user} />)}
-//          </List>
-//
-//       </div>);
-//     },
-//   };
-//
-// };
 
 export default Lunch;
