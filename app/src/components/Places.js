@@ -1,9 +1,15 @@
 import React from 'react';
-
+import { List, ListItem, ListSubHeader, ListDivider, ListCheckbox } from 'react-toolbox/lib/list';
 
 const Places = ({ places }) => {
 
 console.log(places);
+
+  let placesArr = [];
+
+  for (let i in places) {
+    placesArr.push(places[i].name);
+  }
 
   // places = ['mario', 'pippo'];
   return {
@@ -13,8 +19,18 @@ console.log(places);
 
         <h1>Places</h1>
 
-        {places.map((place, i) => <div key={i}>{place}</div>) }
+        <List selectable ripple>
+          <ListSubHeader caption='Place' />
 
+          {placesArr.map((place, i) => <ListItem
+            key={i}
+            // avatar='https://dl.dropboxusercontent.com/u/2247264/assets/m.jpg'
+            caption={place}
+            // legend="Jonathan 'Jon' Osterman"
+            // rightIcon='star'
+          />) }
+
+        </List>
       </div>);
     },
   };

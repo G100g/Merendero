@@ -10,21 +10,59 @@ import { browserHistory } from 'react-router'
 */
 
 const defaultState = {
-  places: { all: []},
+  user: {
+    id: 'giorgio',
+    name: 'Giorgio'
+  },
+  places: {
+    prete: {
+      name: 'Al bar del prete'
+    },
+    ciao: {
+      name: 'Ciao'
+    },
+    pignotto: {
+      name: 'Pignotto'
+    },
+    piadina: {
+      name: 'Piadina'
+    }
+  },
   users: {
 
     giorgio: {
-      name: 'Giorgio'
+      name: 'Giorgio',
+      votes: {
+        piadina: 3,
+        ciao: 2,
+        prete: 4,
+        pignotto: 5,
+
+      }
     },
     gabriele: {
-      name: 'Gabriele'
+      name: 'Gabriele',
+      votes: {
+        piadina: 5,
+        ciao: 5,
+        prete: 1,
+        pignotto: 2,
+
+      }
     },
     davide: {
-      name: 'davide'
+      name: 'Davide',
+      votes: {
+        piadina: 1,
+        ciao: 0,
+        prete: 5,
+        pignotto: 5,
+
+      }
     },
 
   },
-  lunches: ['giorgio']
+  lunches: []
     // 20161011: {
     //   users: ['giorgio', 'davide', 'gabriele']
     // }

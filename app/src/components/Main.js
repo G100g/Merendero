@@ -14,7 +14,7 @@ console.log(props);
       </AppBar>
 
       <section>
-      {props.children}
+      {React.cloneElement(props.children, props)}
       </section>
 
     </div>
