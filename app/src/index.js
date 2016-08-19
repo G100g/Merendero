@@ -4,6 +4,7 @@ import { Router, Route, IndexRoute } from 'react-router'
 
 import AppContainer from './components/AppContainer';
 import Places from './components/Places';
+import SinglePlace from './components/SinglePlace';
 import People from './components/People';
 import LunchContainer from './components/LunchContainer';
 import LunchResult from './components/LunchResult';
@@ -28,6 +29,7 @@ ReactDOM.render(
           <Route path="/" component={AppContainer}>
             <IndexRoute component={Home} />
             <Route path="/places" component={Places}></Route>
+            <Route path="/places/single" component={SinglePlace}></Route>
             <Route path="/people" component={People}></Route>
             <Route path="/lunch" component={LunchContainer}></Route>
             <Route path="/lunch/result" component={LunchResult}></Route>

@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { List, ListItem, ListSubHeader, ListDivider, ListCheckbox } from 'react-toolbox/lib/list';
+import { Button } from 'react-toolbox/lib/button';
 
 const Places = ({ places }) => {
 
@@ -17,8 +19,6 @@ console.log(places);
     render() {
       return (<div>
 
-        <h1>Places</h1>
-
         <List selectable ripple>
           <ListSubHeader caption='Place' />
 
@@ -31,6 +31,10 @@ console.log(places);
           />) }
 
         </List>
+
+        <Link to="/places/single">
+          <Button icon='add' floating />
+        </Link>
       </div>);
     },
   };

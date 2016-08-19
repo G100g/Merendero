@@ -11,10 +11,13 @@ const places = (state = { all: []}, action) => {
 
       // state.all.push(action.value);
 
-      let newall = state.all.slice(0);
-      newall.push(action.value);
+      let place = {
+        [action.value]: {
+          name: action.value
+        }
+      };
 
-      return Object.assign({}, state, { all: newall } );
+      return Object.assign({}, state, place );
 
     default:
       return state;
