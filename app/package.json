@@ -19,6 +19,7 @@
     "eslint-plugin-react": "^5.1.1",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "1.0.1",
+    "immutability-helper": "^2.0.0",
     "node-sass": "3.7.0",
     "normalize.css": "^4.0.0",
     "postcss-loader": "0.9.1",
